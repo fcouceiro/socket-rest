@@ -1,6 +1,6 @@
 {
   "name": "socket-rest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A router for socket.io that handles events in a RESTful style",
   "main": "index.js",
   "scripts": {

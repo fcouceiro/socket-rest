@@ -1,0 +1,36 @@
+{
+  "name": "socket-rest",
+  "version": "0.1.0",
+  "description": "A router for socket.io that handles events in a RESTful style",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=socket-rest* mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcouceiro/socket-rest.git"
+  },
+  "keywords": [
+    "socket.io",
+    "socket",
+    "rest",
+    "router"
+  ],
+  "author": "Francisco Couceiro <couceiro.f@gmail.com> (https://remote.com/franciscocouceiro)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fcouceiro/socket-rest/issues"
+  },
+  "homepage": "https://github.com/fcouceiro/socket-rest#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "dependencies": {
+    "debug": "^3.0.1",
+    "url-parse": "^1.1.9",
+    "url-pattern": "^1.0.3"
+  }
+}

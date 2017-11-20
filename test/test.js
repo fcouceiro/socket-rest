@@ -143,4 +143,26 @@ describe('#socket-rest', function() {
             });
         });
     });
+
+    describe('Encoded parameters', function () {
+        var strangeParam = 'some:strange string with _ spaces=" and stuff';
+
+        // Register get route    
+        socketRest.get('/books/:bookName', function(req, socket, callback) {
+            expect(req.params.bookName).to.equal(strangeParam);
+            
+            callback();
+        });
+
+        it('should handle encoded params', function(done) {
+            // Connect client and request route
+            var client = ioc.connect(socketURL);
+
+            client.on('connect', function() {
+                client.emit('/books/' + encodeURIComponent(strangeParam) + '/get', function(){
+                    done();
+                }); 
+            });
+        });
+    });
 });

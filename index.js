@@ -122,6 +122,11 @@ function SocketRest() {
 
             // Fire route function
             if(resourceMatch){
+                // Decode params
+                for(let prop in resourceMatch){
+                    resourceMatch[prop] = decodeURIComponent(resourceMatch[prop]);
+                }
+                
                 // Create request information holder
                 var req = {
                     query : route.query,
